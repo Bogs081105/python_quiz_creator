@@ -3,6 +3,7 @@ from rich.console import Console # add colors into the text inside the terminal
 from rich.prompt import Prompt
 from rich.panel import Panel
 # import datetime for timestamp
+from datetime import datetime
 
 #initialize console from rich 
 console = Console()
@@ -39,10 +40,12 @@ while True:
         console.print("[red]INVALID ENTRY![/red][bold] Please enter A, B, C, or D[/bold]")
 
 # add a time stamp
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # save the inputs into the file
     with open("quiz_data.txt", mode='a', newline='', encoding='utf-8' ) as file:
     #insert the timestamp here
+        file.write(f"Timestamp: {timestamp}\n")
         file.write(f"Question: {question}\n")
         file.write(f"A. {answer_a}\n")
         file.write(f"B. {answer_b}\n")
