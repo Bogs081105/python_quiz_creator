@@ -12,6 +12,7 @@ quiz_data = []
 while True:
     console.print("[bold yellow] Add a New question[/bold yellow]")
 # ask the user to input questions
+    question = input("[bold]Please enter your question: [bold]")
 # ask the user to input the choices of the questions [A, B, C, D]
 # ask the user to enter the correct answer of the question
 # add the questions and answers into the empty list
