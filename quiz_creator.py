@@ -1,6 +1,7 @@
 # import necessary libraries
 import csv # save as csv file
 from rich.console import Console # add colors into the text inside the terminal
+from rich.prompt import Prompt
 
 #initialize console from rich 
 console = Console()
@@ -12,7 +13,7 @@ quiz_data = []
 while True:
     console.print("[bold yellow] Add a New question[/bold yellow]")
 # ask the user to input questions
-    question = input("[bold]Please enter your question: [bold]")
+    question = Prompt.ask("[bold]Please enter your question[/bold]")
 # ask the user to input the choices of the questions [A, B, C, D]
 # ask the user to enter the correct answer of the question
 # add the questions and answers into the empty list
