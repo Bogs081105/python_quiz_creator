@@ -39,16 +39,16 @@ while True:
         console.print("[red]INVALID ENTRY![/red][bold] Please enter A, B, C, or D[/bold]")
 
 # save the inputs into the file
-with open("quiz_creator.csv", mode='a', newline='', encoding='utf-8' ) as file:
-    writer = csv.writer(file)
-    writer.writerow([question])
-    writer.writerow([answer_a])
-    writer.writerow([answer_b])
-    writer.writerow([answer_c])
-    writer.writerow([answer_d])
-    writer.writerow([correct_answer])
+    with open("quiz_creator.csv", mode='a', newline='', encoding='utf-8' ) as file:
+        writer = csv.writer(file)
+        writer.writerow([question])
+        writer.writerow([answer_a])
+        writer.writerow([answer_b])
+        writer.writerow([answer_c])
+        writer.writerow([answer_d])
+        writer.writerow([correct_answer])
 
 # ask the user if they want to continue or not
-ask_again = Prompt.ask("[bold]Ask another question?[/bold]([bold green]Yes[/bold green]/[bold red]No[/bold]").lower
-if ask_again != "yes":
-    console.print("\n[bold cyan] Good job! Quiz has now been finished![/bold cyan]")
+    ask_again = Prompt.ask("[bold]Ask another question?[/bold]([bold green]Yes[/bold green]/[bold red]No[/bold]").lower
+    if ask_again != "yes":
+        console.print("\n[bold cyan] Good job! Quiz has now been finished![/bold cyan]")
