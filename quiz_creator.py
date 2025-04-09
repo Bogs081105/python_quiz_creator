@@ -42,8 +42,10 @@ while True:
     answer_d = Prompt.ask("D")
 
 # ask the user to enter the correct answer of the question
-    correct_answer = Prompt.ask("[green]Enter the correct answer(A/B/C/D)[/green]").upper()
-    if correct_answer not in ["A", "B", "C", "D"]:
+    while True:
+        correct_answer = Prompt.ask("[green]Enter the correct answer(A/B/C/D)[/green]").upper()
+        if correct_answer not in ["A", "B", "C", "D"]:
+            break
         console.print("[red]INVALID ENTRY![/red][bold] Please enter A, B, C, or D[/bold]")
 
 # add a time stamp
