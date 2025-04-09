@@ -2,9 +2,12 @@
 import csv # save as csv file
 from rich.console import Console # add colors into the text inside the terminal
 from rich.prompt import Prompt
+from rich.panel import Panel
 
 #initialize console from rich 
 console = Console()
+
+console.print(Panel.fit("[bold] Welcome to Python Quiz Creator![bold]"))
 
 # use while loop to continuously ask the user
 while True:
