@@ -43,5 +43,15 @@ data = [question, answer_a, answer_b, answer_c, answer_d, correct_answer]
 
 # add the questions and answers into the empty list
 quiz_data.append(data)
+
 # save the inputs into the file
+with open("quiz_creator.csv", mode='a', newline='', encoding='utf-8' ) as file:
+    writer = csv.writer(file)
+    writer.writerow([question])
+    writer.writerow([answer_a])
+    writer.writerow([answer_b])
+    writer.writerow([answer_c])
+    writer.writerow([answer_d])
+    writer.writerow([correct_answer])
+
 # ask the user if they want to continue or not
