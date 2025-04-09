@@ -70,7 +70,7 @@ while True:
        
 
 # ask the user if they want to continue or not
-    ask_again = Prompt.ask("[bold]Ask another question?[bold]([bold green]Yes[/bold green]/[bold red]No)[/bold red]").lower()
+    ask_again = Prompt.ask("[bold]Ask another question?[/bold]([bold green]Yes[/bold green]/[bold red]No)[/bold red]").lower()
     if ask_again != "yes":
         console.print("\n[bold cyan] Good job! Quiz has now been finished![/bold cyan]")
         break
