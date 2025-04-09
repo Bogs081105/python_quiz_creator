@@ -15,7 +15,6 @@ time.sleep(2)
 
 # use while loop to continuously ask the user
 while True:
-    os.system("cls" if os.name == "nt" else "clear")
     console.print("[bold yellow] Add a New question[/bold yellow]")
 # ask the user to input questions
     question = Prompt.ask("[bold]Please enter your question[/bold]")
@@ -73,3 +72,6 @@ while True:
     if ask_again != "yes":
         console.print("\n[bold cyan] Good job! Quiz has now been finished![/bold cyan]")
         break
+    else:
+        time.sleep(1)
+        os.system("cls" if os.name == "nt" else "clear")
