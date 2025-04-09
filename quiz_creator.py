@@ -5,7 +5,9 @@ from rich.panel import Panel
 # import datetime for timestamp
 from datetime import datetime
 # import os for a cleaner output within the terminal
+import os
 # import rich progress and time for saving function
+from rich.progress import Progress
 
 #initialize console from rich 
 console = Console()
@@ -13,7 +15,8 @@ console = Console()
 console.print(Panel.fit("[bold] Welcome to Python Quiz Creator![/bold]"))
 
 # use while loop to continuously ask the user
-# clear screen at the start of each question
+# clear screen at the start of each 
+os.system("cls" if os.name == "nt" else "clear")
 while True:
     console.print("[bold yellow] Add a New question[/bold yellow]")
 # ask the user to input questions
