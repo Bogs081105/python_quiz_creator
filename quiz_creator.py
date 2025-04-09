@@ -8,6 +8,7 @@ from datetime import datetime
 import os
 # import rich progress and time for saving function
 from rich.progress import Progress
+import time
 
 #initialize console from rich 
 console = Console()
@@ -49,6 +50,11 @@ while True:
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # add saving question function
+    with Progress() as progress:
+        task = progress.add_task("[cyan]Saving question...", total=100)
+        while not progress.finished:
+            progress.update(task, advance=20)
+            time.sleep(0.1)
 
 # save the inputs into the file
     with open("quiz_data.txt", mode='a', newline='', encoding='utf-8' ) as file:
