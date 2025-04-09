@@ -15,6 +15,9 @@ while True:
 # ask the user to input questions
     question = Prompt.ask("[bold]Please enter your question[/bold]")
 # add exit condition
+    if question == "exit":
+        console.print("[bold green] Exiting the quiz creator...[/bold green]")
+        break
 # ask the user to input the choices of the questions [A, B, C, D]
 # ask the user to enter the correct answer of the question
 # add the questions and answers into the empty list
