@@ -19,6 +19,10 @@ while True:
         console.print("[bold green] Exiting the quiz creator...[/bold green]")
         break
 # ask the user to input the choices of the questions [A, B, C, D]
+    answer_a = Prompt.ask("[dark_magenta]A[/dark magenta]")
+    answer_b = Prompt.ask("[dark_magenta]B[/dark magenta]")
+    answer_c = Prompt.ask("[dark_magenta]C[/dark magenta]")
+    answer_d = Prompt.ask("[dark_magenta]D[/dark magenta]")
 # ask the user to enter the correct answer of the question
 # add the questions and answers into the empty list
 # save the inputs into the file
