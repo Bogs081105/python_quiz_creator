@@ -6,9 +6,6 @@ from rich.prompt import Prompt
 #initialize console from rich 
 console = Console()
 
-# initialize an empty list to store the quiz data
-quiz_data = []
-
 # use while loop to continuously ask the user
 while True:
     console.print("[bold yellow] Add a New question[/bold yellow]")
@@ -37,12 +34,6 @@ while True:
     correct_answer = Prompt.ask("[green]Enter the correct answer(A/B/C/D)[/green]").upper()
     if correct_answer not in ["A", "B", "C", "D"]:
         console.print("[red]INVALID ENTRY![/red][bold] Please enter A, B, C, or D[/bold]")
-
-# add a new set that includes the answers inputted
-data = [question, answer_a, answer_b, answer_c, answer_d, correct_answer]
-
-# add the questions and answers into the empty list
-quiz_data.append(data)
 
 # save the inputs into the file
 with open("quiz_creator.csv", mode='a', newline='', encoding='utf-8' ) as file:
