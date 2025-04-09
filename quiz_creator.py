@@ -16,9 +16,9 @@ console = Console()
 console.print(Panel.fit("[bold] Welcome to Python Quiz Creator![/bold]"))
 
 # use while loop to continuously ask the user
-# clear screen at the start of each 
-os.system("cls" if os.name == "nt" else "clear")
+
 while True:
+    os.system("cls" if os.name == "nt" else "clear")
     console.print("[bold yellow] Add a New question[/bold yellow]")
 # ask the user to input questions
     question = Prompt.ask("[bold]Please enter your question[/bold]")
