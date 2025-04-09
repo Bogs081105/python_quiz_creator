@@ -1,4 +1,7 @@
 # import necessary libraries
+import csv # save as csv file
+from rich.console import Console # add colors into the text inside the terminal
+
 # initialize an empty list to store the quiz data
 # use while loop to continuously ask the user
 # ask the user to input questions
