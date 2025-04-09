@@ -2,8 +2,12 @@
 import csv # save as csv file
 from rich.console import Console # add colors into the text inside the terminal
 
+#initialize console from rich 
+console = Console()
+
 # initialize an empty list to store the quiz data
 quiz_data = []
+
 # use while loop to continuously ask the user
 # ask the user to input questions
 # ask the user to input the choices of the questions [A, B, C, D]
