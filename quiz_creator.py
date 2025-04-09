@@ -11,6 +11,7 @@ import time
 console = Console()
 
 console.print(Panel.fit("[bold] Welcome to Python Quiz Creator![/bold]"))
+time.sleep(2)
 
 # use while loop to continuously ask the user
 while True:
