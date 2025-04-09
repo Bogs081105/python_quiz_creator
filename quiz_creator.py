@@ -55,3 +55,6 @@ with open("quiz_creator.csv", mode='a', newline='', encoding='utf-8' ) as file:
     writer.writerow([correct_answer])
 
 # ask the user if they want to continue or not
+ask_again = Prompt.ask("[bold]Ask another question?[/bold]([bold green]Yes[/bold green]/[bold red]No[/bold]").lower
+if ask_again != "yes":
+    console.print("\n[bold cyan] Good job! Quiz has now been finished![/bold cyan]")
