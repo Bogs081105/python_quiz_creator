@@ -2,6 +2,7 @@
 from rich.console import Console # add colors into the text inside the terminal
 from rich.prompt import Prompt
 from rich.panel import Panel
+# import datetime for timestamp
 
 #initialize console from rich 
 console = Console()
