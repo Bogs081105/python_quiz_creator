@@ -7,7 +7,7 @@ from rich.panel import Panel
 #initialize console from rich 
 console = Console()
 
-console.print(Panel.fit("[bold] Welcome to Python Quiz Creator![bold]"))
+console.print(Panel.fit("[bold] Welcome to Python Quiz Creator![/bold]"))
 
 # use while loop to continuously ask the user
 while True:
@@ -49,6 +49,6 @@ while True:
         writer.writerow([correct_answer])
 
 # ask the user if they want to continue or not
-    ask_again = Prompt.ask("[bold]Ask another question?[/bold]([bold green]Yes[/bold green]/[bold red]No[/bold]").lower
+    ask_again = Prompt.ask("[bold]Ask another question?[/bold]([bold green]Yes[/bold green]/[bold red]No[/bold]").lower()
     if ask_again != "yes":
         console.print("\n[bold cyan] Good job! Quiz has now been finished![/bold cyan]")
