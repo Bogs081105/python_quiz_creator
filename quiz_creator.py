@@ -34,6 +34,11 @@ while True:
     answer_d = Prompt.ask("D")
 
 # ask the user to enter the correct answer of the question
+    correct_answer = Prompt.ask("[green]Enter the correct answer(A/B/C/D)[/green]").upper()
+    if correct_answer not in ["A", "B", "C", "D"]:
+        console.print("[red]INVALID ENTRY![/red][bold] Please enter A, B, C, or D[/bold]")
+        
+# add a new set that includes the answers inputted
 # add the questions and answers into the empty list
 # save the inputs into the file
 # ask the user if they want to continue or not
