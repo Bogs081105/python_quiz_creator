@@ -2,11 +2,8 @@
 from rich.console import Console # add colors into the text inside the terminal
 from rich.prompt import Prompt
 from rich.panel import Panel
-# import datetime for timestamp
 from datetime import datetime
-# import os for a cleaner output within the terminal
 import os
-# import rich progress and time for saving function
 from rich.progress import Progress
 import time
 
@@ -16,7 +13,6 @@ console = Console()
 console.print(Panel.fit("[bold] Welcome to Python Quiz Creator![/bold]"))
 
 # use while loop to continuously ask the user
-
 while True:
     os.system("cls" if os.name == "nt" else "clear")
     console.print("[bold yellow] Add a New question[/bold yellow]")
