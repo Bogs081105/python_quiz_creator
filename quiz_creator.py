@@ -40,6 +40,8 @@ while True:
 
 # add a new set that includes the answers inputted
 data = [question, answer_a, answer_b, answer_c, answer_d, correct_answer]
+
 # add the questions and answers into the empty list
+quiz_data.append(data)
 # save the inputs into the file
 # ask the user if they want to continue or not
