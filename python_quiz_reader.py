@@ -1,4 +1,5 @@
 # import the necessary libraries
+import random
 import os
 from rich.console import Console
 from rich.prompt import Prompt
