@@ -5,6 +5,9 @@ from rich.console import Console
 from rich.prompt import Prompt
 from rich.panel import Panel
 
+# Initialize console from rich
+
+
 # Load the quiz data from the file
 with open("quiz_data.txt", "r", encoding="utf-8") as file:
     quiz_content = file.read().strip()
