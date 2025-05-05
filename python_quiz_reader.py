@@ -6,17 +6,22 @@ from rich.prompt import Prompt
 from rich.panel import Panel
 
 # Initialize console from rich
-
+console = Console()
+console.print(Panel.fit("[bold] Welcome to Python Quiz Reader![/bold]"))
 
 # Load the quiz data from the file
-with open("quiz_data.txt", "r", encoding="utf-8") as file:
-    quiz_content = file.read().strip()
+if not os.path.exists("quiz_data.txt"):
+    console.print("[bold red]Quiz data file not found. Please create a quiz first.[/bold red]")
+else:
+    with open("quiz_data.txt", "r", encoding="utf-8") as file:
+        quiz_content = file.read().strip()
 
 # option for empty empty quiz data/not found quiz data
-if not quiz_content:
-    print("[bold red]No quiz data found. Please create a quiz first.[/bold red]")
-else:
-    # Split the quiz content into individual questions
+    if not quiz_content:
+        print("[bold red]No quiz data found. Please create a quiz first.[/bold red]")
+    else:
+        # Split the quiz content into individual questions
+
 
 # Start quiz loop to allow the user to keep taking the quiz until they choose to exit
 # pick a random question from the quiz data
