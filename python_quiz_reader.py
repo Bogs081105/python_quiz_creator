@@ -26,7 +26,7 @@ else:
         raw_quizzes = quiz_content.split("---\n")
         for quiz in raw_quizzes:
             lines = quiz.strip().splitlines()
-            if len(lines) < 6:
+            if len(lines) < 7:
                 console.print("[bold red]Invalid quiz format. Please check the quiz data.[/bold red]")
                 continue
 
