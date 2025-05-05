@@ -20,7 +20,11 @@ else:
     if not quiz_content:
         print("[bold red]No quiz data found. Please create a quiz first.[/bold red]")
     else:
-        # Split the quiz content into individual questions
+        raw_quizzes = quiz_content.split("---\n")
+        for quiz in raw_quizzes:
+            lines = quiz.strip().splitlines()
+
+        
 
 
 # Start quiz loop to allow the user to keep taking the quiz until they choose to exit
