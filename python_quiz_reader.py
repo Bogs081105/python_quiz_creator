@@ -1,4 +1,9 @@
 # import the necessary libraries
+import os
+from rich.console import Console
+from rich.prompt import Prompt
+from rich.panel import Panel
+
 # Load the quiz data from the file
 # option for empty empty quiz data/not found quiz data
 # Start quiz loop to allow the user to keep taking the quiz until they choose to exit
