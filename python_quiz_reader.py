@@ -21,10 +21,14 @@ else:
 # option for empty empty quiz data/not found quiz data
     if not quiz_content:
         print("[bold red]No quiz data found. Please create a quiz first.[/bold red]")
+# Separate the quiz data into individual quizzes and process each one
     else:
         raw_quizzes = quiz_content.split("---\n")
         for quiz in raw_quizzes:
             lines = quiz.strip().splitlines()
+            if len(lines) < 6:
+                console.print("[bold red]Invalid quiz format. Please check the quiz data.[/bold red]")
+                continue
 
         
 
