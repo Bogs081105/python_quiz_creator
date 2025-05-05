@@ -9,7 +9,7 @@ from rich.panel import Panel
 console = Console()
 console.print(Panel.fit("[bold] Welcome to Python Quiz Reader![/bold]"))
 # Initialize empty set to store the questions
-quiz_data = []
+questions = []
 
 # Load the quiz data from the file
 if not os.path.exists("quiz_data.txt"):
