@@ -30,6 +30,17 @@ else:
                 console.print("[bold red]Invalid quiz format. Please check the quiz data.[/bold red]")
                 continue
 
+            quiz_data = {
+                "timestamp": lines[0].replace("Timestamp: ", ""),
+                "question": lines[1].replace("Question: ", ""),
+                "A": lines[2][3:].strip(),
+                "B": lines[3][3:].strip(),
+                "C": lines[4][3:].strip(),
+                "D": lines[5][3:].strip(),
+                "correct": lines[6].replace("Correct Answer: ", "").strip().upper()
+            }
+            questions.append(quiz_data)
+
         
 
 
