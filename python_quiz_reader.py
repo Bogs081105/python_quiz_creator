@@ -50,6 +50,8 @@ while True:
         console.print("[bold red]No quiz data available. Please create a quiz first.[/bold red]")
         break
 # pick a random question from the quiz data
+    question = random.choice(questions)
+
 # display the question
 # Ask the user to input their answer
 # Check if the answer is correct and display the result
