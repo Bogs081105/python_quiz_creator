@@ -82,3 +82,4 @@ while True:
     if ask_again == "no":
         console.print(f"[bold magenta]Your score: {score}/{total_attempts}[/bold magenta]")
         console.print("[bold blue]Thank you for taking the quiz![/bold blue]")
+        break
