@@ -43,7 +43,7 @@ else:
 
         
 
-
+# Initialize score and total attempts
 # Start quiz loop to allow the user to keep taking the quiz until they choose to exit
 while True:
     if not questions:
