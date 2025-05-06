@@ -73,12 +73,12 @@ while True:
     total_attempts += 1
 
 # Ask the user if they want to continue or exit the
-while True:
-    ask_again = Prompt.ask("[bold] Do you want to continue? (Yes/No)[/bold]").strip().lower()
-    if ask_again in ("yes", "no"):
-        break
-    console.print("[bold red]Invalid input. Please enter 'Yes' or 'No'.[/bold red]")
+    while True:
+        ask_again = Prompt.ask("[bold] Do you want to continue? (Yes/No)[/bold]").strip().lower()
+        if ask_again in ("yes", "no"):
+            break
+        console.print("[bold red]Invalid input. Please enter 'Yes' or 'No'.[/bold red]")
 
-if ask_again == "no":
-    console.print(f"[bold magenta]Your score: {score}/{total_attempts}[/bold magenta]")
-    console.print("[bold blue]Thank you for taking the quiz![/bold blue]")
+    if ask_again == "no":
+        console.print(f"[bold magenta]Your score: {score}/{total_attempts}[/bold magenta]")
+        console.print("[bold blue]Thank you for taking the quiz![/bold blue]")
