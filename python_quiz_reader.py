@@ -59,6 +59,8 @@ while True:
     console.print(f"C. {question['C']}")
     console.print(f"D. {question['D']}")
 # Ask the user to input their answer
+    user_answer = Prompt.ask("[bold yellow]Your answer (A/B/C/D)[/bold yellow]").strip().upper()
+    
 # Check if the answer is correct and display the result
 # Update the score and display it
 # Ask the user if they want to continue or exit the quiz
