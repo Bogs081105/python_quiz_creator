@@ -52,6 +52,8 @@ while True:
         console.print("[bold red]No quiz data available. Please create a quiz first.[/bold red]")
         break
 # pick a random question from the quiz data
+# initialize an empty set to store asked questions
+# add the question to the asked questions set
     question = random.choice(questions)
 
 # display the question
