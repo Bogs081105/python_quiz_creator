@@ -64,9 +64,10 @@ while True:
     user_answer = Prompt.ask("[bold yellow]Your answer (A/B/C/D)[/bold yellow]").strip().upper()
 
 # Check if the answer is correct and display the result
+# Update the score and display it
     if user_answer == question["correct"]:
         console.print("[bold green]Correct![/bold green]")
     else:
         console.print(f"[bold red]Incorrect! The correct answer is {question['correct']}.[/bold red]")
-# Update the score and display it
+
 # Ask the user if they want to continue or exit the quiz
