@@ -67,7 +67,18 @@ while True:
 # Update the score and display it
     if user_answer == question["correct"]:
         console.print("[bold green]Correct![/bold green]")
+        score += 1
     else:
         console.print(f"[bold red]Incorrect! The correct answer is {question['correct']}.[/bold red]")
+    total_attempts += 1
 
-# Ask the user if they want to continue or exit the quiz
+# Ask the user if they want to continue or exit the
+while True:
+    ask_again = Prompt.ask("[bold] Do you want to continue? (Yes/No)[/bold]").strip().lower()
+    if ask_again in ("yes", "no"):
+        break
+    console.print("[bold red]Invalid input. Please enter 'Yes' or 'No'.[/bold red]")
+
+if ask_again == "no":
+    console.print(f"[bold magenta]Your score: {score}/{total_attempts}[/bold magenta]")
+    console.print("[bold blue]Thank you for taking the quiz![/bold blue]")
