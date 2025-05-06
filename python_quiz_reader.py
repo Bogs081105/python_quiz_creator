@@ -53,6 +53,11 @@ while True:
     question = random.choice(questions)
 
 # display the question
+    console.print(Panel.fit(f"[bold]Question: {question['question']}[/bold]"))
+    console.print(f"A. {question['A']}")
+    console.print(f"B. {question['B']}")
+    console.print(f"C. {question['C']}")
+    console.print(f"D. {question['D']}")
 # Ask the user to input their answer
 # Check if the answer is correct and display the result
 # Update the score and display it
