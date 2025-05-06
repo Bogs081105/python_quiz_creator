@@ -45,6 +45,10 @@ else:
 
 
 # Start quiz loop to allow the user to keep taking the quiz until they choose to exit
+while True:
+    if not questions:
+        console.print("[bold red]No quiz data available. Please create a quiz first.[/bold red]")
+        break
 # pick a random question from the quiz data
 # display the question
 # Ask the user to input their answer
