@@ -41,8 +41,6 @@ else:
             }
             questions.append(quiz_data)
 
-        
-
 # Initialize score and total attempts
 score = 0
 total_attempts = 0
@@ -53,35 +51,40 @@ while True:
         break
 # pick a random question from the quiz data
 # initialize an empty set to store asked questions
+    asked_questions = set()
 # add the question to the asked questions set
-    question = random.choice(questions)
+    while len(asked_questions) < len(questions):   
+        question = random.choice(questions)
+        if question["question"] in asked_questions:
+            continue
+        asked_questions.add(question["question"])
 
 # display the question
-    console.print(Panel.fit(f"[bold]Question: {question['question']}[/bold]"))
-    console.print(f"A. {question['A']}")
-    console.print(f"B. {question['B']}")
-    console.print(f"C. {question['C']}")
-    console.print(f"D. {question['D']}")
+        console.print(Panel.fit(f"[bold]Question: {question['question']}[/bold]"))
+        console.print(f"A. {question['A']}")
+        console.print(f"B. {question['B']}")
+        console.print(f"C. {question['C']}")
+        console.print(f"D. {question['D']}")
 # Ask the user to input their answer
-    user_answer = Prompt.ask("[bold yellow]Your answer (A/B/C/D)[/bold yellow]").strip().upper()
+        user_answer = Prompt.ask("[bold yellow]Your answer (A/B/C/D)[/bold yellow]").strip().upper()
 
 # Check if the answer is correct and display the result
 # Update the score and display it
-    if user_answer == question["correct"]:
-        console.print("[bold green]Correct![/bold green]")
-        score += 1
-    else:
-        console.print(f"[bold red]Incorrect! The correct answer is {question['correct']}.[/bold red]")
-    total_attempts += 1
+        if user_answer == question["correct"]:
+            console.print("[bold green]Correct![/bold green]")
+            score += 1
+        else:
+            console.print(f"[bold red]Incorrect! The correct answer is {question['correct']}.[/bold red]")
+        total_attempts += 1
 
-# Ask the user if they want to continue or exit the
-    while True:
-        ask_again = Prompt.ask("[bold] Do you want to continue? (Yes/No)[/bold]").strip().lower()
-        if ask_again in ("yes", "no"):
+# Ask the user if they want to continue or exit the quiz
+        while True:
+            ask_again = Prompt.ask("[bold] Do you want to continue? (Yes/No)[/bold]").strip().lower()
+            if ask_again in ("yes", "no"):
+                break
+            console.print("[bold red]Invalid input. Please enter 'Yes' or 'No'.[/bold red]")
+
+        if ask_again == "no":
+            console.print(f"[bold magenta]Your score: {score}/{total_attempts}[/bold magenta]")
+            console.print("[bold blue]Thank you for taking the quiz![/bold blue]")
             break
-        console.print("[bold red]Invalid input. Please enter 'Yes' or 'No'.[/bold red]")
-
-    if ask_again == "no":
-        console.print(f"[bold magenta]Your score: {score}/{total_attempts}[/bold magenta]")
-        console.print("[bold blue]Thank you for taking the quiz![/bold blue]")
-        break
