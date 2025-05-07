@@ -44,14 +44,13 @@ else:
 # Initialize score and total attempts
 score = 0
 total_attempts = 0
+asked_questions = set()
 # Start quiz loop to allow the user to keep taking the quiz until they choose to exit
-while True:
-    if not questions:
+if not questions:
         console.print("[bold red]No quiz data available. Please create a quiz first.[/bold red]")
-        break
 # pick a random question from the quiz data
 # initialize an empty set to store asked questions
-    asked_questions = set()
+else:
 # add the question to the asked questions set
     while len(asked_questions) < len(questions):   
         question = random.choice(questions)
